@@ -3,16 +3,21 @@ import Boton from './componentes/Boton'
 import Pantalla from './componentes/Pantalla';
 import freeCodeCampLog from './imagenes/freecodecamp-logo.png';
 import ClearBoton from './componentes/ClearBoton';
-import {useState} from 'react';
+import { useState } from 'react';
+import { evaluate } from 'mathjs'
 
 function App() {
 
   const [input, setInput] = useState('');
+
   const agregarInput = (val) => {
     setInput(input + val);
   };
   
-  
+  const calcularResultado = () => {
+    setInput(evaluate(input));
+  }
+
   return (
     <div className="App">
      
@@ -52,7 +57,7 @@ function App() {
         </div>
         
         <div className='fila'>
-          <Boton manejarClick={agregarInput}>=</Boton>
+          <Boton manejarClick={calcularResultado}>=</Boton>
           <Boton manejarClick={agregarInput}>0</Boton>
           <Boton manejarClick={agregarInput}>.</Boton>
           <Boton manejarClick={agregarInput}>\</Boton>
