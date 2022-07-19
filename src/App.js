@@ -8,7 +8,7 @@ import { evaluate } from 'mathjs'
 
 function App() {
 
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState('Para ti con amor BB');
 
   const agregarInput = (val) => setInput(input + val);
   
