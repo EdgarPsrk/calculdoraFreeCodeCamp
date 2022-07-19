@@ -24,11 +24,13 @@ function App() {
     <div className="App">
      
       <div className='freecodecamp-logo-contenedor'>
-        <img
-          src={freeCodeCampLog}
-          className='freecodecamp-logo'
-          alt='Logo de freeCodeCamp'
-        />
+        <a href='https://es.reactjs.org/'>
+          <img
+            src={freeCodeCampLog}
+            className='freecodecamp-logo'
+            alt='Logo de freeCodeCamp'
+          />
+        </a>
       </div>
 
       <div className='contenedor-calculadora'>
@@ -72,7 +74,7 @@ function App() {
         </div>
 
       </div>
-
+      
     </div>
   );
 }
